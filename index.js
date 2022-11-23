@@ -1,7 +1,7 @@
 const express = require("express");
 
 const axios = require("axios");
-const port = 5000;
+const port = process.env.PORT || 5000;
 const cors = require("cors");
 
 const app = express();
@@ -32,4 +32,6 @@ app.get("/", (req, res) => {
     });
 });
 
-module.exports = app;
+app.listen(port, () => {
+  console.log("Server running on port 5000....");
+});
