@@ -28,7 +28,7 @@ app.get("/", (req, res) => {
       }
     )
     .then((response) => {
-      //   console.log(response);
+      console.log(response);
     });
 });
 
